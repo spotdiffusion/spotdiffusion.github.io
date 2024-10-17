@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SpotDiffusion Project Page</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SpotDiffusion: A Fast Approach For Seamless Panorama Generation Over Time</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://stanifrolov.github.io/" target="_blank">Stanislav Frolov</a>,</span>
+                <span class="author-block">
+                  <a href="https://brian-moser.github.io/" target="_blank"> Brian B. Moser</a>,</span>
+                  <span class="author-block">
+                    <a href="https://www.dfki.uni-kl.de/~dengel/indexEng.php" target="_blank">Andreas Dengel</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">German Research Center for Artificial Intelligence (DFKI), Germany<br>RPTU Kaiserslautern-Landau, Germany<br>WACV 2025</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2407.15507" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image -->
+<section class="section hero is-small">
+<div class="container is-max-desktop">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <div class="content has-text-justified">
+      <img src="static/images/img_1.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+        <p>
+          Without overlapping views, MultiDiffusion can not produce coherent panoramas.
+          By averaging overlapping denoising predictions, MultiDiffusion can produce coherent images, but it is slow.
+          We introduce an efficient method for high-resolution panorama generation that eliminates the need for overlapping denoising predictions, resulting in coherent and sharp images without border artifacts.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Generating high-resolution images with generative models has recently been made widely accessible by leveraging diffusion models pre-trained on large-scale datasets. Various techniques, such as MultiDiffusion and SyncDiffusion, have further pushed image generation beyond training resolutions, i.e., from square images to panorama, by merging multiple overlapping diffusion paths or employing gradient descent to maintain perceptual coherence. However, these methods suffer from significant computational inefficiencies due to generating and averaging numerous predictions, which is required in practice to produce high-quality and seamless images. This work addresses this limitation and presents a novel approach that eliminates the need to generate and average numerous overlapping denoising predictions. Our method shifts non-overlapping denoising windows over time, ensuring that seams in one timestep are corrected in the next. This results in coherent, high-resolution images with fewer overall steps. We demonstrate the effectiveness of our approach through qualitative and quantitative evaluations, comparing it with MultiDiffusion, SyncDiffusion, and StitchDiffusion. Our method offers several key benefits, including improved computational efficiency and faster inference times while producing comparable or better image quality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Method -->
+<section class="section hero small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/img_2.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+          <p>
+            MultiDiffusion generates coherent panorama images by averaging overlapping denoising predictions with a stride that is smaller than the denoising window.
+            Our method eliminates the need for overlapping denoising predictions and introduces a more efficient shifting denoising method.
+            Instead of relying on a fixed denoising path with overlapping views, our method shifts the denoising windows over time, ensuring that seams in one timestep are corrected in the next.
+            This results in fast, seamless, high-resolution images with fewer overall steps.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-centered has-text-centered">
+      <h2 class="title is-3">Visual Results</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/1.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          MultiDiffusion with stride=64 vs. SpotDiffusion
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/2.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          MultiDiffusion with stride=32 vs. SpotDiffusion
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/3.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          MultiDiffusion with stride=16 vs. SpotDiffusion
+       </h2>
+     </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/4.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          SyncDiffusion with stride=16 vs. SpotDiffusion
+       </h2>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<!-- Method -->
+<section class="section hero small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">360-Degree Results</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/5.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method -->
+
+<!-- Method -->
+<section class="section hero small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Quantitative Results</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/table.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+          <p>
+            Quantitative results on 512×2048 panorama generation. Fast inference with non-overlapping windows comparison is marked in gray.
+            Our method consistently produces high-quality images as measured by FID with good image-text alignment as measured by CLIPScore and ImageReward.
+            In contrast to the baselines, our method does not require overlapping denoising windows, thus significantly reducing the number of required denoising views and inference time.
+            We reach similar performance as the dense baselines but with a fraction of the time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method -->
+
+<!-- Method -->
+<section class="section hero small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Result Visualizations</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/graphs.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+          <p>
+            Left: CLIPScore comparison of the base StableDiffusion model with MultiDiffusion and our method.
+            Right: FID comparison of SyncDiffusion with MultiDiffusion and our method.
+            Our method reaches similar performance as MultiDiffusion but is significantly faster.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{frolov2024spotdiffusion,
+  title={SpotDiffusion: A Fast Approach For Seamless Panorama Generation Over Time},
+  author={Frolov, Stanislav and Moser, Brian B and Dengel, Andreas},
+  journal={arXiv preprint arXiv:2407.15507},
+  year={2024}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered is-one-fifth">
+      <div class="column is-5">
+        <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=080808&w=a&t=tt&d=SABDIpF7_huHg-wZtbEkdfgPISdWd9Ddpir7TaimsjM&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
