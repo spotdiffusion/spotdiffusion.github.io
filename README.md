@@ -1,3 +1,7 @@
+# Project Page Code for [SpotDiffusion, WACV 2025](https://spotdiffusion.github.io/)
+
+---
+
 # Academic Project Page Template
 This is an academic paper project page template.
 
